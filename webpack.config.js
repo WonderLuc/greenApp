@@ -64,7 +64,7 @@ module.exports = ({develop}) => ({
     new MiniCssExtract({ filename: "[name].[contenthash].css" }),
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new CopyPlugin({
-    patterns: [{ from: "./public" }],
+      patterns: [{ from: "./public", to: "public" }],
     }),
     new CleanWebpackPlugin(),
   ],
