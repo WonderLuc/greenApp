@@ -9,10 +9,10 @@ import './style.scss';
 export default function App(): JSX.Element {
   return (
     <>
-      <Header />
       <HashRouter>
+        <Header />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/map">
             <Main />
           </Route>
           <Route path="/element">
