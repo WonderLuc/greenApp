@@ -1,0 +1,15 @@
+.nav-link{
+  text-decoration: none;
+  border: 2px solid;
+  border-radius: 5px;
+  background-color:  rgb(100, 247, 81);
+  padding: 10px 15px;
+  
+  &_active{
+    background-color:  rgb(255, 255, 255);
+
+    &:hover{
+      background-color:  rgb(202, 202, 202);
+    }
+  }
+}

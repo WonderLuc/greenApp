@@ -4,6 +4,7 @@ import { Route } from 'react-router';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import PointInfo from './Components/PointInfo/PointInfo';
+import './style.scss';
 
 export default function App(): JSX.Element {
   return (
