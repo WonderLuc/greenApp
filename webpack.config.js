@@ -63,9 +63,9 @@ module.exports = ({develop}) => ({
     ...eslint(develop),
     new MiniCssExtract({ filename: "[name].[contenthash].css" }),
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
-    // new CopyPlugin({
-    //   patterns: [{ from: "./public" }],
-    // }),
+    new CopyPlugin({
+      patterns: [{ from: "./public", to: "public" }],
+    }),
     new CleanWebpackPlugin(),
   ],
   ...devServer(develop)
