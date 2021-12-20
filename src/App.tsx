@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import PointInfo from './Components/PointInfo/PointInfo';
@@ -11,12 +11,17 @@ export default function App(): JSX.Element {
     <>
       <Header />
       <HashRouter>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        <Route path="/element">
-          <PointInfo />
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/element">
+            <PointInfo />
+          </Route>
+          <Route path="*">
+            <h1>404</h1>
+          </Route>
+        </Switch>
       </HashRouter>
     </>
   );
