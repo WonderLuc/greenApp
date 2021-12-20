@@ -1,6 +1,6 @@
 .nav-link{
   text-decoration: none;
-  border: 1px solid black;
+  border: 0px solid black;
   color:#88FF04;
   height: 100%;
   line-height: 100px;
@@ -12,3 +12,42 @@
   }
 
 }
+.PonInfo-zone {
+  padding-top:100px;
+  height:100vh;
+  max-height:100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.pointname-zone {
+  padding-left: 2.5vh;
+  height:100px;
+  width:100%;
+  background: #525050;
+  display: flex;
+  flex-direction:column;
+  align-content:space-around;
+}
+.point-name {
+  color:#FFFFFF;
+  font: 46px sans-serif;
+}
+.point-adress {
+  color:#DDDDDD;
+  font: 26px sans-serif;
+}
+.tomap {
+  padding-top: 20px;
+  margin-left: 1vh;
+  font: 36px sans-serif;
+  color:#88FF04;
+  border:3px solid white;
+  background-color: #FFFFFF;
+
+  & > img{
+    height:40px;
+    width: 50px;
+  }
+
+}
+
