@@ -10,7 +10,7 @@ header {
     justify-content:flex-start;
     align-items: center;
     box-sizing: border-box;
-    box-shadow: 0px 5px 5px rgb(161, 151, 151);
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, .5);
     height:100px;
     width: 100%;
     background-color:rgba(136, 255, 4, 1);
@@ -54,7 +54,7 @@ header {
     z-index: 9999;
 
     &_open{
-        display: block;  
+        display: block;
     }
 }
 .menu {
@@ -108,7 +108,20 @@ header {
         margin: 5px;
         background: white;
     }
-    
+    &_open {
+        .burger-menu__line {
+            &:first-child {
+                transform: rotate(45deg) translate(15%, 0);
+             }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:last-child {
+                transform: rotate(-45deg) translate(15%, 0);
+            }
+        }
+    }
+
     &:hover{
         cursor: pointer;
 

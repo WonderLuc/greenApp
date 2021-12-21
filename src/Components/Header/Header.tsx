@@ -15,7 +15,10 @@ export default function Header(): JSX.Element {
           <h1 className="project-name">Eco-Mode</h1>
         </div>
         <div className="navbar-Rpart">
-          <div className="burger-menu" onClick={() => setOpenMenu(!isMenuOpen)}>
+          <div
+            className={`burger-menu ${isMenuOpen ? 'burger-menu_open' : ''}`}
+            onClick={() => setOpenMenu(!isMenuOpen)}
+          >
             <div className="burger-menu__line" />
             <div className="burger-menu__line" />
             <div className="burger-menu__line" />
