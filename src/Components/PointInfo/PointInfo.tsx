@@ -1,66 +1,53 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.scss';
 
 export default function PointInfo(): JSX.Element {
+  const [worktimeOpen, setWorktime] = useState(false);
+
   return (
-    <main>
-      <div className="PonInfo-zone">
-        <div className="pointname-zone">
-          <p className="point-name">Name of point</p>
-          <p className="point-adress">Adress</p> 
-        </div>
-        <NavLink to="/map" className="nav-link" activeClassName="nav-link_active">
-          <button className="tomap" type="button"><img className="Arrow1" src="./public/Arrow1.png" alt="Arrow" /> Карта</button>
-        </NavLink>
-        <div className="Info-zone">
-          <p className="Worktime">Время работы<p className="Alltime">▼</p></p>
-          <div className="materials">
-            <p>Принимаемые материалы</p>
-            <ul className="MatTake">
-              <li>
-                <p>Стекло</p>
-              </li>
-              <li>
-                <p>Металл</p>
-              </li>
-              <li>
-                <p>Бумага</p>
-              </li>
-              <li>
-                <p>ПВХ</p>
-              </li>
-              <li>
-                <p>Батарейки</p>
-              </li>
-            </ul>  
-          </div>
-          <form className="report">
-            <div className="report-inputs">
-              <label>Как ваше имя?</label>
-              <input type="text" required placeholder="Вашe имя" />
-              <label>Как вам эта точка?</label>
-              <input type="text" required placeholder="Ваш отзыв..." />
-            </div>
-            <div className="stars">
-              <img className="ScaleStar" src="./public/Star1.png" alt="GoodStar" />
-              <img className="ScaleStar" src="./public/Star1.png" alt="GoodStar" />
-              <img className="ScaleStar" src="./public/Star1.png" alt="GoodStar" />
-              <img className="ScaleStar" src="./public/Star1.png" alt="GoodStar" />
-              <img className="ScaleStar" src="./public/Star2.png" alt="GoodStar" />
-            </div>
-            <div className="Sumbit-btn">
-              <button>Оставить отзыв</button>
-            </div>
-          </form>
-          <div className="Oldreports">
-            <p className="ReportsResult"> Отзывы 4.5 <img className="Star" src="./public/Star1.png" alt="GoodStar" /></p>
-            <p className="UserName"> User Name</p>
-            <p className="Oldtext"> OpOpOpOpOp<img className="Arrow2" src="./public/Arrow3.png" alt="Arrow" /></p>
-          </div>
-          <button className="Allreports" type="button">Все отзывы</button>
-        </div>
-      </div>
+    <main className="point">
+      <article className="point-name">
+        <h2 className="point-name__title">Переработки пункт малыш</h2>
+        <h3 className="point-name__adress">Московая 20</h3>
+      </article>
+      <NavLink to="/" className="nav-link">
+        <p className="nav-link_back">
+          <i className="arrow arrow_left" />
+          Карта
+        </p>
+      </NavLink>
+      <article className="point-worktime">
+        <h2 className="point-worktime__title">Время работы</h2>
+        <section className="point-worktime__list" onClick={() => setWorktime(!worktimeOpen)}>
+          <ul className={`worktime-list ${worktimeOpen ? 'worktime-list_open' : ''}`}>
+            <li className="worktime-list__item">Вт: 10:00 - 22:00</li>
+            <li className="worktime-list__item">Вт: 10:00 - 22:00</li>
+            <li className="worktime-list__item">Вт: 10:00 - 22:00</li>
+            <li className="worktime-list__item">Вт: 10:00 - 22:00</li>
+            <li className="worktime-list__item">Вт: 10:00 - 22:00</li>
+            <li className="worktime-list__item">Вт: 10:00 - 22:00</li>
+            <li className="worktime-list__item">Вт: 10:00 - 22:00</li>
+          </ul>
+          <i className={`arrow ${worktimeOpen ? 'arrow_up' : 'arrow_down'}`} />
+        </section>
+      </article>
+      <article className="materials">
+        <h2 className="materials__title">Принимаемые материалы:</h2>
+        <ul className="materials-list">
+          <li className="materials-list__item">Стеклотара</li>
+          <li className="materials-list__item">Стеклотара</li>
+          <li className="materials-list__item">Стеклотара</li>
+          <li className="materials-list__item">Стеклотара</li>
+          <li className="materials-list__item">Стеклотара</li>
+        </ul>
+      </article>
+      <article className="inwork">
+        <h2 className="inwork__title">Отзывы</h2>
+        <h2 className="inwork__message">В разработке</h2>
+      </article>
     </main>
   );
 }
