@@ -1,8 +1,46 @@
-.main-zone {
+@media screen and (max-width:781px) {
+  .main-zone {
+      width:100%;
+      height:100vh;
+  }
+
+  .leaflet-container{
+    height: 100vh;
+  }
+}
+@media screen and (min-width:781px) {
+  .main-zone {
+    position: absolute;
+    top:0px;
+    left:0px;
+    padding-left: 30vw;
     width:100%;
     height:100vh;
+    max-height:100vh;
+  }
+      
+  .leaflet-container{
+    height: 100vh;
+    max-height:100vh;
+
+  }
+
 }
-    
-.leaflet-container{
-  height: 100vh;
+@media screen and (min-width:2000px) {
+  .main-zone {
+    position: absolute;
+    top:0px;
+    left:0px;
+    padding-left: 600px;
+    width:100%;
+    height:100vh;
+    max-height:100vh;
+  }
+      
+  .leaflet-container{
+    height: 100vh;
+    max-height:100vh;
+
+  }
+
 }
