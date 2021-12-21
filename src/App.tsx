@@ -12,7 +12,7 @@ export default function App(): JSX.Element {
       <HashRouter>
         <Header />
         <Switch>
-          <Route exact path="/map">
+          <Route exact path="/">
             <Main />
           </Route>
           <Route path="/element">

@@ -3,8 +3,8 @@ import './style.scss';
 
 export default function Loader(): JSX.Element {
   return (
-    <div className="loader-zone">
-      <div className="loader" />
-    </div>
+    <article className="loader">
+      <p>Loading</p>
+    </article>
   );
 }
