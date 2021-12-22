@@ -51,6 +51,11 @@
   align-items: baseline;
   padding: 10px 20px 20px 20px;
 
+  .unknown {
+    color: #DDD;
+    font-size: 24px;
+  }
+
   &__title {
     margin-right: 10px;
     font-weight: normal;
