@@ -161,20 +161,20 @@
         background-color:#525050;
     }
     .project-name {
+        color: #000;
         text-align: center;
-        width: 100%;
-        font: 1.5rem sans-serif;
+        width: 30vw;
+        font: 2em sans-serif;
     }
     .logo {
         width: 8vw;
-        margin-left:auto;
-        margin-right:auto;
-        padding-bottom:2vw;
+        margin-left:11vw;
+        margin-right:11vw;
     }
     .menu-zone {
         //display:none;
         position: fixed;
-        top: 14vw;
+        top: 18vw;
         left: 0;
         height: 80vh;
         width: 30vw;
@@ -191,7 +191,7 @@
         flex-direction: column;
     }
     .menu-element{
-        font: 0.35em sans-serif;
+        font: 1.2em sans-serif;
         border:0px solid;
         color:#88FF04;
         background-color: #525050;
