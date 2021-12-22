@@ -1,11 +1,23 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink, useHistory, useParams } from 'react-router-dom';
+import { setDownloadActivity } from '../../Store/Actions';
+import { IState } from '../../Store/types';
 import './style.scss';
 
 export default function PointInfo(): JSX.Element {
   const [worktimeOpen, setWorktime] = useState(false);
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const { id } = useParams<{ id: string }>();
+  const point = useSelector((state: IState) => state.pointsState.points.find((p) => p.id === +id));
+
+  useEffect(() => {
+    if (!point) history.push('/');
+    dispatch(setDownloadActivity(false));
+  });
 
   return (
     <main className="point">

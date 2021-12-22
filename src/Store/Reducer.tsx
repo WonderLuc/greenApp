@@ -17,6 +17,6 @@ function ReducerPoint(state: IPointsState = { points }, action: any): IPointsSta
   return state;
 }
 
-const reducer = combineReducers({ download: ReducerDownload });
+const reducer = combineReducers({ download: ReducerDownload, pointsState: ReducerPoint });
 
 export default reducer;

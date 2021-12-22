@@ -4,10 +4,12 @@ export interface IDownloadState {
 
 export interface IPoint {
   name: string;
+  address: string;
   latitude: number;
   longitude: number;
   materials: string[];
-  worktime: undefined | string;
+  worktime: undefined | string[];
+  id: number;
 }
 
 export interface IPointsState {
@@ -17,7 +19,7 @@ export interface IPointsState {
 // Common state after combineReducers
 export interface IState {
   download: IDownloadState;
-  pointState: IPointsState;
+  pointsState: IPointsState;
 }
 
 export enum EDownloadActions {
