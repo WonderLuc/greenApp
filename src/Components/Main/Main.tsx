@@ -1,7 +1,7 @@
 import { Map } from 'leaflet';
 import React, { useEffect, useState } from 'react';
 import {
-  MapContainer, Marker, TileLayer,
+  MapContainer, TileLayer,
 } from 'react-leaflet';
 import { useDispatch } from 'react-redux';
 import { setDownloadActivity } from '../../Store/Actions';
