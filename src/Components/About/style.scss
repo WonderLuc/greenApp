@@ -1,6 +1,7 @@
 .container {
   min-height: 100vh;
   margin-left: 30vw;
+  cursor: default;
 }
 
 .about {
@@ -110,6 +111,15 @@
     background-color: #88FF04;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: #76da03;
+    }
+
+    &:active {
+      background: #63b603;
+    }
   }
 }
 
