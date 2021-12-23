@@ -41,7 +41,7 @@ export default function Header(): JSX.Element {
             </li>
             <li>
               <NavLink
-                to="/o-nas"
+                to="/about"
                 className="nav-link"
                 activeClassName="nav-link_active"
                 onClick={() => setOpenMenu(!isMenuOpen)}
