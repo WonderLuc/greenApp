@@ -30,7 +30,7 @@ export default function About(): JSX.Element {
             <li className="answer__list-item">Собери и рассортируй мусор</li>
             <li className="answer__list-item">Открой карту</li>
             <li className="answer__list-item">Выбери удобную тебе точку</li>
-            <li className="answer__list-item">Сдай мусор. Будь внимателен - некторые точки взимают плату</li>
+            <li className="answer__list-item">Сдай мусор</li>
             <li className="answer__list-item">Расскажи другим</li>
           </ol>
         </section>
