@@ -30,16 +30,6 @@ export default function Header(): JSX.Element {
           <ul className="nav-list">
             <li>
               <NavLink
-                to="/lk"
-                className="nav-link"
-                activeClassName="nav-link_active"
-                onClick={() => setOpenMenu(!isMenuOpen)}
-              >
-                <button className="menu-element" type="button">Личный Кабинет</button>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 exact
                 to="/"
                 className="nav-link"
