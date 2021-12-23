@@ -32,7 +32,7 @@ export default function Main(): JSX.Element {
                 geoData?.coords.longitude ? geoData?.coords.longitude : 60.6135816]);
               dispatch(setDownloadActivity(false));
             }}
-            zoom={10}
+            zoom={12}
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
