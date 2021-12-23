@@ -7,6 +7,7 @@ import PointInfo from './Components/PointInfo/PointInfo';
 import './style.scss';
 import Loader from './Components/Loader/Loader';
 import About from './Components/About/About';
+import Error from './Components/Error/Error';
 
 export default function App(): JSX.Element {
   return (
@@ -24,7 +25,7 @@ export default function App(): JSX.Element {
             <About />
           </Route>
           <Route path="*">
-            <h1>404</h1>
+            <Error />
           </Route>
         </Switch>
         <Loader />
