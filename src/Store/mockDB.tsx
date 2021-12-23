@@ -269,8 +269,8 @@ const points: IPoint[] = [
     address: 'ул.Белинского 66',
     worktime: undefined,
     materials: ['Одежда', 'Бумага', 'Иное'],
-    longitude: 60.825584,
-    latitude: 56.481708,
+    longitude: 60.615800,
+    latitude: 56.829773,
     id: 28,
   },
   {
