@@ -96,6 +96,7 @@
 }
 
 .exclude {
+  position: relative;
   text-align: center;
 
   h2 {
@@ -120,6 +121,14 @@
     &:active {
       background: #63b603;
     }
+  }
+
+  &__student{
+    position: absolute;
+    padding: 5px;
+    border: 2px dashed rgb(243, 36, 36);
+    border-radius: 2px;
+    background: white;
   }
 }
 

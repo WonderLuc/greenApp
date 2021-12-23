@@ -1,7 +1,7 @@
 import { Map } from 'leaflet';
 import React, { useEffect, useState } from 'react';
 import {
-  MapContainer, Marker, TileLayer,
+  MapContainer, TileLayer,
 } from 'react-leaflet';
 import { useDispatch } from 'react-redux';
 import { setDownloadActivity } from '../../Store/Actions';
@@ -32,7 +32,7 @@ export default function Main(): JSX.Element {
                 geoData?.coords.longitude ? geoData?.coords.longitude : 60.6135816]);
               dispatch(setDownloadActivity(false));
             }}
-            zoom={10}
+            zoom={12}
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

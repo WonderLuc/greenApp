@@ -1,9 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useRef } from 'react';
 import './style.scss';
 
 export default function About(): JSX.Element {
+  const excludeRef = useRef<HTMLElement>(null);
+  function onExclude(): void {
+    if (excludeRef !== null) {
+      const elem = document.createElement('p');
+      elem.innerHTML = 'Отчислен';
+      elem.style.cssText = `
+        left: ${Math.round(Math.random() * 80)}%;
+        top: ${Math.round(Math.random() * 100)}%;
+      `;
+      excludeRef.current?.append(elem);
+      elem.classList.add('exclude__student');
+    }
+  }
   return (
     <main className="container">
       <article className="about">
@@ -34,10 +47,10 @@ export default function About(): JSX.Element {
             <li className="answer__list-item">Расскажи другим</li>
           </ol>
         </section>
-        <section className="exclude">
+        <section className="exclude" ref={excludeRef}>
           <h2>Помоги нам и дальше быть лучше!</h2>
           <p>Просто нажми и освободи нас от проблем, мешающим сосредоточиться на проекте</p>
-          <button type="button">Отчислить лодырей</button>
+          <button type="button" onClick={onExclude}>Отчислить лодырей</button>
         </section>
       </article>
     </main>
