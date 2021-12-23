@@ -8,7 +8,7 @@ import { IPoint, IState } from '../../Store/types';
 
 const customIcon = L.icon({
   iconUrl: './public/Marker.svg',
-  iconRetinaUrl: './Marker.svg',
+  iconRetinaUrl: './public/Marker.svg',
   iconAnchor: [12, 52],
   popupAnchor: undefined,
   iconSize: [32, 64],
