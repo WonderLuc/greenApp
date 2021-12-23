@@ -21,7 +21,7 @@ export default function About(): JSX.Element {
     <main className="container">
       <article className="about">
         <section className="about__we">
-          <h2 className="we__title">Мы - студенты УФРУ, которые собрались дружной компанией поддержать состояние своего города</h2>
+          <h2 className="we__title">Мы - студенты УРФУ, которые собрались дружной компанией поддержать состояние своего города</h2>
           <p className="we__subtitle">Этот проект призван привлечь всеобщее внимание к экологии и побудить заботливо обходиться с нашим общим домом, прикладывая к этому небольшие усилия.</p>
         </section>
         <section className="about__problem">
