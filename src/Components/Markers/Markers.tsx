@@ -7,7 +7,7 @@ import { setDownloadActivity } from '../../Store/Actions';
 import { IPoint, IState } from '../../Store/types';
 
 const customIcon = L.icon({
-  iconUrl: './Marker.svg',
+  iconUrl: './public/Marker.svg',
   iconRetinaUrl: './Marker.svg',
   iconAnchor: [12, 52],
   popupAnchor: undefined,

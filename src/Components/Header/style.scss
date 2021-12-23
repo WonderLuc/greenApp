@@ -1,3 +1,4 @@
+* {margin:0; padding:0;}
 @media screen and (max-width:780px) {
     header {
         position: sticky;
@@ -204,7 +205,11 @@
             background-color:#696969;
         }
     }
+    .nav-list > li > .nav-link {
+        padding-left: 0px !important;
+    }
     .nav-link_active .menu-element{
+        padding-left: 0px !important;
         background-color: white;
     }
 
